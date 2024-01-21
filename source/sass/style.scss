@@ -1,1 +1,15 @@
-@import "./modules/block"
+// Vendor
+@import "./vendor/normalize";
+
+// Variables
+@import "./variables";
+@import "./mixins";
+
+// Global
+@import "./global/container";
+@import "./global/fonts";
+@import "./global/reboot";
+@import "./global/utils";
+
+// Blocks
+@import "./modules/btn";
