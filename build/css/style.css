@@ -315,16 +315,16 @@ template {
   min-width: 320px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 50px;
 }
-@media (max-width: 389px) {
+@media (max-width: 1023px) {
   .container {
     padding: 0 45px;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 389px) {
   .container {
-    padding: 0 50px;
+    padding: 0 10px;
   }
 }
 
@@ -359,7 +359,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: normal;
+  line-height: 150%;
   font-family: "Inter", "Arial", sans-serif;
   color: #000000;
   scroll-behavior: smooth;
@@ -368,6 +368,10 @@ html {
 html,
 body {
   height: 100%;
+}
+
+body {
+  background-color: #ffffff;
 }
 
 main {
@@ -406,4 +410,156 @@ img {
 
 .scroll-lock {
   overflow: hidden;
+}
+
+.btn {
+  display: flex;
+  width: 180px;
+  height: 48px;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #ee2523;
+  background-color: #ee2523;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 140%;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background-color: #f25655;
+    border-color: #f25655;
+  }
+}
+.btn.focus-visible:active {
+  background-color: #df1311;
+}
+.btn:focus-visible {
+  outline: none;
+}
+.btn:disabled {
+  background-color: #c5c5c5;
+  pointer-events: none;
+}
+
+.hero {
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.hero__title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 130%;
+  margin: 0 0 40px 0;
+  z-index: 1;
+}
+
+.hero__button {
+  z-index: 1;
+}
+
+.hero__pay {
+  position: fixed;
+  right: 0;
+  top: 44.2%;
+}
+
+.hero__background-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.service {
+  padding: 64px 0;
+}
+
+.service__title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0 0 40px 0;
+}
+
+.service__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.17%;
+}
+
+.service__item {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.12);
+}
+
+.service__item--city .service__item-photo-wrapper {
+  background-color: #2d4470;
+}
+
+.service__item--yard .service__item-photo-wrapper {
+  background-color: #f9dabe;
+}
+
+.service__item--personal .service__item-photo-wrapper {
+  background-color: #bfbfc0;
+}
+
+.service__item-photo-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service__item-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0 0 12px 0;
+}
+
+.service__item-description {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: normal;
+}
+
+.service__item-info {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.service__price {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.service__from {
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+}
+
+.service__digit {
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.service__currency {
+  display: flex;
+  flex-direction: column;
+  line-height: 130.5%;
+}
+
+.service__currency span:first-child {
+  text-decoration-line: underline;
 }

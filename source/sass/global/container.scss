@@ -3,13 +3,13 @@
   min-width: 320px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 50px;
 
-  @include vp-389 {
+  @include vp-1023 {
     padding: 0 45px;
   }
 
-  @include vp-1023 {
-    padding: 0 50px;
+  @include vp-389 {
+    padding: 0 10px;
   }
 }

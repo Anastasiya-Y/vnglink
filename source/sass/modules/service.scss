@@ -1,0 +1,95 @@
+.service {
+  padding: 64px 0;
+}
+
+.service__title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0 0 40px 0;
+}
+
+.service__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.17%;
+}
+
+.service__item {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  box-shadow: 0 4px 14px 0 $color-shadow;
+}
+
+.service__item--city {
+  .service__item-photo-wrapper {
+    background-color: $color-resolution-blue;
+  }
+}
+
+.service__item--yard {
+  .service__item-photo-wrapper {
+    background-color: $color-karry;
+  }
+}
+
+.service__item--personal {
+  .service__item-photo-wrapper {
+    background-color: $color-ghost;
+  }
+}
+
+.service__item-photo-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service__item-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0 0 12px 0;
+}
+
+.service__item-description {
+  color: rgba($color-default-black, 0.5);
+  line-height: normal;
+}
+
+.service__item-info {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.service__price {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.service__from {
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+}
+
+.service__digit {
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.service__currency {
+  display: flex;
+  flex-direction: column;
+  line-height: 130.5%;
+}
+
+.service__currency span:first-child {
+  text-decoration-line: underline;
+}

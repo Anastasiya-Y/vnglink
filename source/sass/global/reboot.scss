@@ -8,7 +8,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: normal;
+  line-height: 150%;
   font-family: $ff-inter;
   color: $color-default-black;
 
@@ -18,6 +18,10 @@ html {
 html,
 body {
   height: 100%;
+}
+
+body {
+  background-color: $color-default-white;
 }
 
 main {

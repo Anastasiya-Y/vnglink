@@ -1,0 +1,35 @@
+.btn {
+  display: flex;
+  width: 180px;
+  height: 48px;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid $color-red-orange;
+  background-color: $color-red-orange;
+  color: rgba($color-default-white, 0.9);
+  line-height: 140%;
+
+  @include hover {
+    &:hover {
+      background-color: $color-flamingo;
+      border-color: $color-flamingo;
+    }
+  }
+
+  @include active {
+    background-color: $color-free-speech-red;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-silver;
+    pointer-events: none;
+  }
+}
