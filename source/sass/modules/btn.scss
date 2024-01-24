@@ -1,8 +1,6 @@
 .btn {
   display: flex;
-  width: 180px;
-  height: 48px;
-  padding: 10px 10px;
+  padding: 13px 18px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -12,6 +10,7 @@
   background-color: $color-red-orange;
   color: rgba($color-default-white, 0.9);
   line-height: 140%;
+  transition: background-color $trans-default;
 
   @include hover {
     &:hover {

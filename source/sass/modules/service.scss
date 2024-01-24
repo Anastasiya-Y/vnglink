@@ -1,5 +1,9 @@
 .service {
   padding: 64px 0;
+
+  @include vp-767 {
+    padding: 60px 0;
+  }
 }
 
 .service__title {
@@ -7,6 +11,12 @@
   font-weight: 600;
   line-height: 150%;
   margin: 0 0 40px 0;
+
+  @include vp-1439 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
 }
 
 .service__list {
@@ -16,6 +26,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4.17%;
+
+  @include vp-1439 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.6%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .service__item {
@@ -23,6 +44,11 @@
   flex-direction: column;
   padding: 40px 30px;
   box-shadow: 0 4px 14px 0 $color-shadow;
+
+  @include vp-767 {
+    padding: 40px 45px 40px 30px;
+    min-height: 527px;
+  }
 }
 
 .service__item--city {
@@ -44,8 +70,25 @@
 }
 
 .service__item-photo-wrapper {
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 24px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include vp-1439 {
+    height: 23.44vw;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    height: 37.5vw;
+  }
 }
 
 .service__item-title {
@@ -53,35 +96,60 @@
   font-weight: 600;
   line-height: 150%;
   margin: 0 0 12px 0;
+
+  @include vp-767 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
 }
 
 .service__item-description {
   color: rgba($color-default-black, 0.5);
   line-height: normal;
+  margin: 0 0 28px 0;
+
+  @include vp-1439 {
+    margin-bottom: 19px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
 }
 
 .service__item-info {
   display: flex;
-  gap: 20px;
+  gap: 5.45%;
   justify-content: space-between;
+  margin-top: auto;
+
+  @include vp-1439 {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .service__price {
   display: inline-flex;
   gap: 6px;
   align-items: center;
-  font-weight: 500;
 }
 
 .service__from {
   font-size: 30px;
   line-height: 100%;
-  letter-spacing: 0.5px;
 }
 
 .service__digit {
   font-size: 48px;
   line-height: 100%;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+
+  @include vp-1439 {
+    font-size: 40px;
+    font-weight: 400;
+  }
 }
 
 .service__currency {
@@ -92,4 +160,14 @@
 
 .service__currency span:first-child {
   text-decoration-line: underline;
+}
+
+.service__more-link {
+  @include vp-1439 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    width: 66.67%;
+  }
 }
