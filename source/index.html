@@ -20,7 +20,7 @@
                 <use href="img/sprite.svg#logo"></use>
               </svg>
             </a>
-            <nav class="main-header__nav">
+            <nav class="main-header__nav" data-menu>
               <ul class="main-header__nav-list">
                 <li class="main-header__nav-item">
                   <a class="main-header__nav-link" href="#">Интернет</a>
@@ -28,46 +28,65 @@
                 <li class="main-header__nav-item">
                   <a class="main-header__nav-link" href="#">Телевидение</a>
                 </li>
-                <li class="main-header__nav-item">
-                  <a class="main-header__nav-link" href="#">Выгодно</a>
+                <li class="main-header__nav-item" data-open-submenu>
+                  <button class="main-header__nav-link" type="button">Выгодно</button>
+                  <ul class="main-header__submenu-list" data-submenu>
+                    <li class="main-header__submenu-item">
+                      <a class="main-header__submenu-link" href="#">Интернет+TV</a>
+                    </li>
+                    <li class="main-header__submenu-item">
+                      <a class="main-header__submenu-link" href="#">Конструктор тарифа</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="main-header__nav-item">
-                  <a class="main-header__nav-link" href="#">Видеонаблюдение</a>
+                  <a class="main-header__nav-link" type="button">Видеонаблюдение</a>
                 </li>
                 <li class="main-header__nav-item">
                   <a class="main-header__nav-link" href="#">Оборудование</a>
                 </li>
-                <li class="main-header__nav-item">
-                  <a class="main-header__nav-link" href="#">Информация</a>
+                <li class="main-header__nav-item" data-open-submenu>
+                  <button class="main-header__nav-link" href="#">Информация</button>
+                  <ul class="main-header__submenu-list" data-submenu>
+                    <li class="main-header__submenu-item">
+                      <a class="main-header__submenu-link" href="#">Новости</a>
+                    </li>
+                    <li class="main-header__submenu-item">
+                      <a class="main-header__submenu-link" href="#">Вакансии</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="main-header__nav-item">
                   <a class="main-header__nav-link" href="#">Контакты</a>
                 </li>
               </ul>
             </nav>
-            <a class="main-header__tel" href="tel:73496458000" aria-label="Позвонить в офис компании Север-связь.">
+            <a class="main-header__tel" href="tel:73496458000" aria-label="Позвонить в офис компании Север-связь." data-tel-block>
               <svg width="23" height="21">
                 <use href="img/sprite.svg#icon-contacts"></use>
               </svg>
               <span>+7&nbsp;(3496)&nbsp;45-80-00</span>
             </a>
+            <button class="main-header__toggle" type="button" data-open-menu>
+              <span class="visually-hidden">Открыть меню/закрыть</span>
+            </button>
           </div>
         </div>
       </header>
       <main>
         <div class="hero">
+          <div class="hero__background-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/content/hero-background.webp 1x, img/content/hero-background@2x.webp 2x">
+              <img src="img/content/hero-background.jpg" srcset="img/content/hero-background@2x.jpg 2x" width="804" height="412" alt="Наши камеры.">
+            </picture>
+          </div>
           <div class="container">
             <div class="hero__wrapper">
               <h1 class="hero__title">Системы видеонаблюдения по&nbsp;отличной цене в&nbsp;Ноябрьске</h1>
               <a class="hero__button btn" href="#">Подключить</a>
-              <div class="hero__background-wrapper">
-                <picture>
-                  <source type="image/webp" srcset="img/content/hero-background.webp 1x, img/content/hero-background@2x.webp 2x">
-                  <img src="img/content/hero-background.jpg" srcset="img/content/hero-background@2x.jpg 2x" width="804" height="412" alt="Наши камеры.">
-                </picture>
-              </div>
               <a class="hero__pay btn" href="#">
-                <span>Оплатить услуги</span>
+                <p>Оплатить<span>&nbsp;услуги</span></p>
                 <svg width="24" height="24">
                   <use href="img/sprite.svg#icon-wallet"></use>
                 </svg>

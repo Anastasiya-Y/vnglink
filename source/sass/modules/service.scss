@@ -16,6 +16,11 @@
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 32px;
+    margin: 0 0 32px 7px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 32px 2px;
   }
 }
 
@@ -29,7 +34,7 @@
 
   @include vp-1439 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.6%;
+    gap: 18px 2.6%;
   }
 
   @include vp-767 {
@@ -97,6 +102,10 @@
   line-height: 150%;
   margin: 0 0 12px 0;
 
+  @include vp-1439 {
+    margin: 0 0 9px 0;
+  }
+
   @include vp-767 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -106,10 +115,10 @@
 .service__item-description {
   color: rgba($color-default-black, 0.5);
   line-height: normal;
-  margin: 0 0 28px 0;
+  margin: 0 0 23px 0;
 
   @include vp-1439 {
-    margin-bottom: 19px;
+    margin-bottom: 31px;
   }
 
   @include vp-767 {
@@ -132,7 +141,7 @@
 .service__price {
   display: inline-flex;
   gap: 6px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .service__from {
@@ -143,7 +152,7 @@
 .service__digit {
   font-size: 48px;
   line-height: 100%;
-  letter-spacing: 0.5px;
+  letter-spacing: 2.5px;
   font-weight: 500;
 
   @include vp-1439 {
@@ -164,10 +173,12 @@
 
 .service__more-link {
   @include vp-1439 {
-    width: 100%;
+    width: 95%;
+    font-size: 19px;
+    padding: 10px 18px;
   }
 
   @include vp-767 {
-    width: 66.67%;
+    width: 82%;
   }
 }
